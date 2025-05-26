@@ -1,0 +1,145 @@
+2025-05-24 22:00:38.565 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-24 22:00:38.574 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-24 22:00:49.835 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: analytics tools comparison for marketing teams
+2025-05-24 22:01:14.936 | WARNING  | src.content_generation.content_generator:_validate_content_quality:352 - Content too short: 746 words
+2025-05-24 22:01:14.937 | WARNING  | src.content_generation.content_generator:generate_post:138 - Content quality validation failed for: analytics tools comparison for marketing teams
+2025-05-24 22:01:43.156 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-24 22:01:43.163 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-24 22:01:54.292 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: top automation tools tools for entrepreneurs
+2025-05-24 22:02:18.656 | WARNING  | src.content_generation.content_generator:_validate_content_quality:364 - Content readability too low: 29.357534977593815
+2025-05-24 22:02:18.656 | WARNING  | src.content_generation.content_generator:generate_post:138 - Content quality validation failed for: top automation tools tools for entrepreneurs
+2025-05-24 22:02:52.902 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-24 22:02:52.909 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-24 22:02:52.935 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: free design tools for designers
+2025-05-24 22:03:17.314 | WARNING  | src.content_generation.content_generator:_validate_content_quality:382 - Keyword density out of range: 0.000
+2025-05-24 22:03:17.330 | WARNING  | src.content_generation.content_generator:generate_post:138 - Content quality validation failed for: free design tools for designers
+2025-05-24 22:04:52.677 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-24 22:04:52.677 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-24 22:05:12.966 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-24 22:05:12.982 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-24 22:05:12.997 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: free design tools for designers
+2025-05-24 22:05:40.798 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.093
+2025-05-24 22:05:40.814 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top Free Design Tools for Designers 2023
+2025-05-24 22:05:40.825 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-24 22:05:40.828 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-free-design-tools-for-designers-2023.md
+2025-05-24 22:05:40.841 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: how to choose analytics tools for coaches
+2025-05-24 22:05:59.968 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.052
+2025-05-24 22:05:59.972 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: How to Choose Analytics Tools for Coaches
+2025-05-24 22:05:59.979 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-24 22:05:59.981 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: how-to-choose-analytics-tools-for-coaches.md
+2025-05-24 22:58:00.609 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-24 22:58:00.615 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-24 22:58:11.841 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: discord review for e-commerce stores
+2025-05-24 22:58:33.562 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.055
+2025-05-24 22:58:33.578 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Discord Review for E-commerce Stores
+2025-05-24 22:58:33.583 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-24 22:58:33.588 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: discord-review-for-e-commerce-stores.md
+2025-05-24 22:58:33.594 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: free email marketing for designers
+2025-05-24 22:58:57.904 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.069
+2025-05-24 22:58:57.904 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Free Email Marketing for Designers: Top Tools
+2025-05-24 22:58:57.915 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-24 22:58:57.919 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: free-email-marketing-for-designers-top-tools.md
+2025-05-24 22:58:57.926 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: analytics tools comparison for restaurants
+2025-05-24 22:59:28.021 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.059
+2025-05-24 22:59:28.021 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top Analytics Tools Comparison for Restaurants
+2025-05-24 22:59:28.041 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 6 affiliate links into content
+2025-05-24 22:59:28.043 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-analytics-tools-comparison-for-restaurants.md
+2025-05-24 22:59:28.049 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: getting started with discord for remote teams
+2025-05-24 22:59:51.791 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.088
+2025-05-24 22:59:51.806 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Getting Started with Discord for Remote Teams
+2025-05-24 22:59:51.812 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 6 affiliate links into content
+2025-05-24 22:59:51.816 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: getting-started-with-discord-for-remote-teams.md
+2025-05-24 22:59:51.822 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: crm tools benefits for restaurants
+2025-05-24 23:00:14.131 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.052
+2025-05-24 23:00:14.136 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top CRM Tools Benefits for Restaurants
+2025-05-24 23:00:14.146 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-24 23:00:14.150 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-crm-tools-benefits-for-restaurants.md
+2025-05-24 23:00:14.161 | ERROR    | src.site_management.hugo_manager:build_site:446 - Hugo not found. Please install Hugo.
+2025-05-24 23:00:14.164 | ERROR    | src.site_management.hugo_manager:build_site:446 - Hugo not found. Please install Hugo.
+2025-05-24 23:00:14.166 | INFO     | src.performance_tracking.serp_tracker:update_rankings:24 - Starting SERP ranking update...
+2025-05-24 23:00:14.167 | INFO     | src.performance_tracking.serp_tracker:update_rankings:28 - SERP tracking placeholder - ready for implementation
+2025-05-24 23:00:14.169 | INFO     | src.performance_tracking.serp_tracker:generate_report:47 - Generated performance report
+2025-05-24 23:00:42.760 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-24 23:00:42.760 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-24 23:00:42.778 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: hotjar alternatives for real estate agents
+2025-05-24 23:01:10.481 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top Hotjar Alternatives for Real Estate Agents
+2025-05-24 23:01:10.497 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-24 23:01:10.509 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-hotjar-alternatives-for-real-estate-agents.md
+2025-05-25 11:35:17.092 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-25 11:35:17.092 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-25 11:35:17.121 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: best ai tools for small business automation 2024
+2025-05-25 11:35:48.683 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.070
+2025-05-25 11:35:48.683 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Best AI Tools for Small Business Automation 2024
+2025-05-25 11:35:48.703 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 6 affiliate links into content
+2025-05-25 11:35:48.708 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: best-ai-tools-for-small-business-automation-2024.md
+2025-05-25 11:35:48.720 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: ai-powered crm software comparison for startups
+2025-05-25 11:36:18.440 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: AI-Powered CRM Software Comparison for Startups
+2025-05-25 11:36:18.458 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 6 affiliate links into content
+2025-05-25 11:36:18.472 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: ai-powered-crm-software-comparison-for-startups.md
+2025-05-25 11:36:18.491 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: top artificial intelligence project management tools
+2025-05-25 11:36:46.239 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.066
+2025-05-25 11:36:46.246 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top AI Project Management Tools 2023
+2025-05-25 11:36:46.257 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-25 11:36:46.264 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-ai-project-management-tools-2023.md
+2025-05-25 11:36:46.281 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: best ai analytics tools for data-driven decisions
+2025-05-25 11:37:06.302 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.069
+2025-05-25 11:37:06.315 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Best AI Analytics Tools for Data-Driven Decisions
+2025-05-25 11:37:06.319 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-25 11:37:06.322 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: best-ai-analytics-tools-for-data-driven-decisions.md
+2025-05-25 11:37:06.381 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: ai email marketing automation platforms for agencies
+2025-05-25 11:37:33.611 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.073
+2025-05-25 11:37:33.624 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top AI Email Marketing Automation Platforms
+2025-05-25 11:37:33.628 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-25 11:37:33.636 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-ai-email-marketing-automation-platforms.md
+2025-05-25 18:54:49.834 | INFO     | src.database.db_manager:initialize:31 - Database initialized successfully
+2025-05-25 18:54:49.834 | INFO     | src.site_management.hugo_manager:initialize:43 - Hugo site initialized
+2025-05-25 18:54:49.865 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: best saas tools for small business 2025
+2025-05-25 18:55:15.889 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.087
+2025-05-25 18:55:15.905 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Best SaaS Tools for Small Business 2025 Guide
+2025-05-25 18:55:15.916 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-25 18:55:15.928 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: best-saas-tools-for-small-business-2025-guide.md
+2025-05-25 18:55:15.947 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: top ai productivity tools 2025
+2025-05-25 18:55:42.117 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top AI Productivity Tools 2025: Boost Efficiency
+2025-05-25 18:55:42.128 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-25 18:55:42.131 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-ai-productivity-tools-2025-boost-efficiency.md
+2025-05-25 18:55:42.146 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: best project management software 2025
+2025-05-25 18:56:07.391 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.077
+2025-05-25 18:56:07.404 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top Project Management Software 2025 Guide
+2025-05-25 18:56:07.414 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 6 affiliate links into content
+2025-05-25 18:56:07.428 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-project-management-software-2025-guide.md
+2025-05-25 18:56:07.452 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: hubspot vs salesforce 2025 comparison
+2025-05-25 18:56:31.796 | WARNING  | src.content_generation.content_generator:_validate_content_quality:364 - Content readability low but acceptable: 19.777142857142906
+2025-05-25 18:56:31.801 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.053
+2025-05-25 18:56:31.801 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: HubSpot vs Salesforce 2025: Ultimate CRM Comparison
+2025-05-25 18:56:31.816 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-25 18:56:31.824 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: hubspot-vs-salesforce-2025-ultimate-crm-comparison.md
+2025-05-25 18:56:31.845 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: top email marketing platforms 2025
+2025-05-25 18:56:52.729 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.071
+2025-05-25 18:56:52.729 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top Email Marketing Platforms 2025 Guide
+2025-05-25 18:56:52.733 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-25 18:56:52.736 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-email-marketing-platforms-2025-guide.md
+2025-05-25 18:56:52.742 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: best ai writing tools for content creators 2025
+2025-05-25 18:57:17.539 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.084
+2025-05-25 18:57:17.544 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Best AI Writing Tools for Content Creators 2025
+2025-05-25 18:57:17.553 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 4 affiliate links into content
+2025-05-25 18:57:17.558 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: best-ai-writing-tools-for-content-creators-2025.md
+2025-05-25 18:57:17.567 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: asana vs monday vs clickup comparison
+2025-05-25 18:57:40.323 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.057
+2025-05-25 18:57:40.336 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Asana vs Monday vs ClickUp: Tool Comparison
+2025-05-25 18:57:40.341 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 6 affiliate links into content
+2025-05-25 18:57:40.343 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: asana-vs-monday-vs-clickup-tool-comparison.md
+2025-05-25 18:57:40.376 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: top business automation tools 2025
+2025-05-25 18:58:03.468 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.092
+2025-05-25 18:58:03.475 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Top Business Automation Tools 2025: Boost Efficiency
+2025-05-25 18:58:03.482 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 3 affiliate links into content
+2025-05-25 18:58:03.485 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: top-business-automation-tools-2025-boost-efficienc.md
+2025-05-25 18:58:03.506 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: convertkit vs mailchimp vs constant contact
+2025-05-25 18:58:33.625 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.054
+2025-05-25 18:58:33.640 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: ConvertKit vs Mailchimp vs Constant Contact
+2025-05-25 18:58:33.646 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-25 18:58:33.651 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: convertkit-vs-mailchimp-vs-constant-contact.md
+2025-05-25 18:58:33.663 | INFO     | src.content_generation.content_generator:generate_post:99 - Generating content for keyword: canva vs adobe creative suite vs figma
+2025-05-25 18:58:59.269 | WARNING  | src.content_generation.content_generator:_validate_content_quality:389 - Keyword density acceptable but low: 0.060
+2025-05-25 18:58:59.284 | INFO     | src.content_generation.content_generator:generate_post:135 - Generated high-quality content: Canva vs Adobe vs Figma: Ultimate Tool Comparison
+2025-05-25 18:58:59.294 | INFO     | src.affiliate_system.link_injector:inject_links:60 - Injected 5 affiliate links into content
+2025-05-25 18:58:59.295 | INFO     | src.site_management.hugo_manager:save_post:390 - Saved post: canva-vs-adobe-vs-figma-ultimate-tool-comparison.md

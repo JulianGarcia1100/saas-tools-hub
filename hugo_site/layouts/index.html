@@ -1,0 +1,162 @@
+{{ define "main" }}
+<div class="homepage">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>🚀 Discover the Best SaaS Tools for Your Business</h1>
+        <p class="hero-subtitle">Expert reviews, comparisons, and guides to help you choose the right tools for productivity, growth, and success.</p>
+
+        <!-- Newsletter Signup - Prominent -->
+        <div class="hero-newsletter">
+            <h3>📧 Get Weekly Tool Reviews</h3>
+            <p>Join 1,000+ business owners getting our curated SaaS tool recommendations delivered to their inbox.</p>
+            {{ if .Site.Params.hubspot_portal_id }}
+            <div id="hero-hubspot-form-container">
+                <div id="hero-hubspot-form"></div>
+                <div id="hero-form-loading" style="text-align: center; padding: 20px;">
+                    <p>Loading newsletter signup...</p>
+                </div>
+            </div>
+            <script>
+                // Wait for HubSpot script to load, then create hero form
+                function createHeroHubSpotForm() {
+                    if (typeof hbspt !== 'undefined' && hbspt.forms) {
+                        // Hide loading message
+                        document.getElementById('hero-form-loading').style.display = 'none';
+
+                        // Create the form
+                        hbspt.forms.create({
+                            portalId: "{{ .Site.Params.hubspot_portal_id }}",
+                            formId: "{{ .Site.Params.hubspot_form_id }}",
+                            target: "#hero-hubspot-form",
+                            onFormReady: function() {
+                                console.log('Hero HubSpot form loaded successfully');
+                            },
+                            onFormSubmit: function() {
+                                console.log('Hero form submitted');
+                                // Track form submission in Google Analytics
+                                if (typeof gtag !== 'undefined') {
+                                    gtag('event', 'newsletter_signup', {
+                                        'event_category': 'engagement',
+                                        'event_label': 'hero_hubspot_form'
+                                    });
+                                }
+                            }
+                        });
+                    } else {
+                        // Retry after 500ms if HubSpot script not loaded yet
+                        setTimeout(createHeroHubSpotForm, 500);
+                    }
+                }
+
+                // Start trying to create form after page loads
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', createHeroHubSpotForm);
+                } else {
+                    createHeroHubSpotForm();
+                }
+            </script>
+            {{ else }}
+            <!-- Fallback form if HubSpot not configured -->
+            <form action="#" method="post" class="hero-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Get Weekly Reviews</button>
+            </form>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Featured Content -->
+    <section class="featured-content">
+        <h2>🔥 Latest Tool Reviews</h2>
+        <div class="posts-grid">
+            {{ range first 9 .Site.RegularPages }}
+            <article class="post-card">
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                <p>{{ .Summary | truncate 120 }}</p>
+                <a href="{{ .Permalink }}" class="read-more">Read Review →</a>
+            </article>
+            {{ end }}
+        </div>
+
+        <!-- All Posts Link for Google Discovery -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="/posts/" style="background: #2563eb; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">View All {{ len .Site.RegularPages }} Tool Reviews →</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <h2>🎯 Browse by Category</h2>
+        <div class="categories-grid">
+            {{ range .Site.Taxonomies.categories }}
+            <div class="category-card">
+                <h4><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h4>
+                <p>{{ len .Pages }} tools reviewed</p>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Bottom Newsletter CTA -->
+    <section class="bottom-newsletter">
+        <div class="newsletter-cta">
+            <h3>💡 Don't Miss New Tool Reviews</h3>
+            <p>Get the latest SaaS tool reviews and productivity tips delivered weekly.</p>
+            {{ if .Site.Params.hubspot_portal_id }}
+            <div id="bottom-hubspot-form-container">
+                <div id="bottom-hubspot-form"></div>
+                <div id="bottom-form-loading" style="text-align: center; padding: 20px;">
+                    <p>Loading signup form...</p>
+                </div>
+            </div>
+            <script>
+                // Wait for HubSpot script to load, then create bottom form
+                function createBottomHubSpotForm() {
+                    if (typeof hbspt !== 'undefined' && hbspt.forms) {
+                        // Hide loading message
+                        document.getElementById('bottom-form-loading').style.display = 'none';
+
+                        // Create the form
+                        hbspt.forms.create({
+                            portalId: "{{ .Site.Params.hubspot_portal_id }}",
+                            formId: "{{ .Site.Params.hubspot_form_id }}",
+                            target: "#bottom-hubspot-form",
+                            onFormReady: function() {
+                                console.log('Bottom HubSpot form loaded successfully');
+                            },
+                            onFormSubmit: function() {
+                                console.log('Bottom form submitted');
+                                // Track form submission in Google Analytics
+                                if (typeof gtag !== 'undefined') {
+                                    gtag('event', 'newsletter_signup', {
+                                        'event_category': 'engagement',
+                                        'event_label': 'bottom_hubspot_form'
+                                    });
+                                }
+                            }
+                        });
+                    } else {
+                        // Retry after 500ms if HubSpot script not loaded yet
+                        setTimeout(createBottomHubSpotForm, 500);
+                    }
+                }
+
+                // Start trying to create form after page loads
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', createBottomHubSpotForm);
+                } else {
+                    createBottomHubSpotForm();
+                }
+            </script>
+            {{ else }}
+            <!-- Fallback form if HubSpot not configured -->
+            <form action="#" method="post" class="bottom-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe Now</button>
+            </form>
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}

@@ -1,0 +1,84 @@
+{{ define "main" }}
+<!-- Breadcrumb Navigation -->
+{{ partial "breadcrumbs.html" . }}
+
+<article>
+    <header>
+        <h1>{{ .Title }}</h1>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ if .Params.categories }}
+        <div class="categories">
+            {{ range .Params.categories }}
+            <span class="category">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+    <!-- Internal Linking for SEO -->
+    {{ partial "related-posts.html" . }}
+
+    <!-- Email Signup Form -->
+    <div class="email-signup">
+        <h3>🚀 Get More SaaS Tool Reviews</h3>
+        <p>Subscribe to our newsletter for weekly SaaS tool reviews and productivity tips delivered to your inbox.</p>
+        {{ if .Site.Params.hubspot_portal_id }}
+        <div id="hubspot-form-container">
+            <div id="hubspot-form"></div>
+            <div id="form-loading" style="text-align: center; padding: 20px;">
+                <p>Loading newsletter signup...</p>
+            </div>
+        </div>
+        <script>
+            // Wait for HubSpot script to load, then create form
+            function createHubSpotForm() {
+                if (typeof hbspt !== 'undefined' && hbspt.forms) {
+                    // Hide loading message
+                    document.getElementById('form-loading').style.display = 'none';
+
+                    // Create the form
+                    hbspt.forms.create({
+                        portalId: "{{ .Site.Params.hubspot_portal_id }}",
+                        formId: "{{ .Site.Params.hubspot_form_id }}",
+                        target: "#hubspot-form",
+                        onFormReady: function() {
+                            console.log('HubSpot form loaded successfully');
+                        },
+                        onFormSubmit: function() {
+                            console.log('Form submitted');
+                            // Track form submission in Google Analytics
+                            if (typeof gtag !== 'undefined') {
+                                gtag('event', 'newsletter_signup', {
+                                    'event_category': 'engagement',
+                                    'event_label': 'hubspot_form'
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    // Retry after 500ms if HubSpot script not loaded yet
+                    setTimeout(createHubSpotForm, 500);
+                }
+            }
+
+            // Start trying to create form after page loads
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', createHubSpotForm);
+            } else {
+                createHubSpotForm();
+            }
+        </script>
+        {{ else }}
+        <!-- Fallback form if HubSpot not configured -->
+        <form action="#" method="post" style="text-align: center;">
+            <input type="email" placeholder="Enter your email" required style="padding: 10px; margin: 5px; border: 1px solid #ddd; border-radius: 4px;">
+            <button type="submit" style="padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 4px; cursor: pointer;">Subscribe</button>
+        </form>
+        {{ end }}
+    </div>
+</article>
+{{ end }}

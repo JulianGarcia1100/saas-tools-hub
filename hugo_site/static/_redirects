@@ -1,0 +1,13 @@
+# Netlify redirects for Hugo site
+# Handle trailing slashes and directory indexes
+
+# Redirect /posts to /posts/
+/posts /posts/ 301
+
+# Handle Hugo's pretty URLs
+/posts/* /posts/:splat/index.html 200
+/categories/* /categories/:splat/index.html 200
+/tags/* /tags/:splat/index.html 200
+
+# Fallback for any other missing pages
+/* /404.html 404

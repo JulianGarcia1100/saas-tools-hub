@@ -1,0 +1,208 @@
+<!-- Google Analytics 4 with Enhanced Affiliate Tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.google_analytics }}', {
+    page_title: document.title,
+    page_location: window.location.href
+  });
+</script>
+
+<!-- Enhanced Affiliate & Conversion Tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('📊 Analytics tracking initialized for affiliate site');
+    
+    // Track affiliate link clicks with detailed data
+    const affiliateLinks = document.querySelectorAll('.affiliate-cta a, a[href*="hubspot"], a[href*="asana"], a[href*="monday"], a[href*="canva"], a[href*="convertkit"], a[target="_blank"]');
+    
+    affiliateLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const linkText = this.textContent.trim();
+            const linkUrl = this.href;
+            const pageTitle = document.title;
+            
+            // Identify the tool being promoted
+            let toolName = 'Unknown Tool';
+            if (linkUrl.includes('hubspot') || linkText.toLowerCase().includes('hubspot')) {
+                toolName = 'HubSpot';
+            } else if (linkUrl.includes('asana') || linkText.toLowerCase().includes('asana')) {
+                toolName = 'Asana';
+            } else if (linkUrl.includes('monday') || linkText.toLowerCase().includes('monday')) {
+                toolName = 'Monday.com';
+            } else if (linkUrl.includes('canva') || linkText.toLowerCase().includes('canva')) {
+                toolName = 'Canva';
+            } else if (linkUrl.includes('convertkit') || linkText.toLowerCase().includes('convertkit')) {
+                toolName = 'ConvertKit';
+            } else if (linkUrl.includes('salesforce') || linkText.toLowerCase().includes('salesforce')) {
+                toolName = 'Salesforce';
+            } else if (linkUrl.includes('zapier') || linkText.toLowerCase().includes('zapier')) {
+                toolName = 'Zapier';
+            }
+            
+            // Send detailed event to Google Analytics
+            gtag('event', 'affiliate_click', {
+                'tool_name': toolName,
+                'link_text': linkText.substring(0, 100), // Limit length
+                'link_url': linkUrl,
+                'page_title': pageTitle,
+                'page_url': window.location.href,
+                'event_category': 'Affiliate',
+                'event_label': toolName,
+                'value': 1,
+                'currency': 'USD'
+            });
+            
+            // Also send a conversion event for high-value tools
+            if (['HubSpot', 'Salesforce', 'Asana', 'Monday.com'].includes(toolName)) {
+                gtag('event', 'high_value_affiliate_click', {
+                    'tool_name': toolName,
+                    'page_title': pageTitle,
+                    'value': 5,
+                    'currency': 'USD'
+                });
+            }
+            
+            console.log('📊 Tracked affiliate click:', toolName, 'on', pageTitle);
+        });
+    });
+    
+    // Track email signup form interactions
+    const emailForms = document.querySelectorAll('form, .email-signup, #hubspot-form');
+    emailForms.forEach(function(form) {
+        // Track form views
+        gtag('event', 'email_form_view', {
+            'page_title': document.title,
+            'form_location': 'email_capture'
+        });
+        
+        // Track form submissions
+        form.addEventListener('submit', function(e) {
+            gtag('event', 'email_signup_attempt', {
+                'page_title': document.title,
+                'page_url': window.location.href,
+                'form_location': 'email_capture',
+                'event_category': 'Lead Generation',
+                'value': 10,
+                'currency': 'USD'
+            });
+            
+            console.log('📊 Tracked email signup attempt on', document.title);
+        });
+    });
+    
+    // Track scroll depth for engagement measurement
+    let maxScroll = 0;
+    let scrollTimer = null;
+    
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            
+            // Track at 25%, 50%, 75%, and 100% scroll
+            if (scrollPercent > maxScroll) {
+                if (scrollPercent >= 25 && maxScroll < 25) {
+                    trackScrollDepth(25);
+                } else if (scrollPercent >= 50 && maxScroll < 50) {
+                    trackScrollDepth(50);
+                } else if (scrollPercent >= 75 && maxScroll < 75) {
+                    trackScrollDepth(75);
+                } else if (scrollPercent >= 100 && maxScroll < 100) {
+                    trackScrollDepth(100);
+                }
+                maxScroll = scrollPercent;
+            }
+        }, 100);
+    });
+    
+    function trackScrollDepth(percent) {
+        gtag('event', 'scroll_depth', {
+            'scroll_percent': percent,
+            'page_title': document.title,
+            'page_url': window.location.href,
+            'event_category': 'Engagement',
+            'event_label': percent + '% Scroll'
+        });
+        
+        // Track high engagement (75%+ scroll) as a conversion
+        if (percent >= 75) {
+            gtag('event', 'high_engagement', {
+                'page_title': document.title,
+                'scroll_percent': percent,
+                'value': 2,
+                'currency': 'USD'
+            });
+        }
+        
+        console.log('📊 Tracked scroll depth:', percent + '%');
+    }
+    
+    // Track time on page (for engagement)
+    let startTime = Date.now();
+    let timeTracked = false;
+    
+    // Track 30 seconds, 1 minute, 2 minutes, 5 minutes
+    setTimeout(function() {
+        if (!timeTracked) {
+            gtag('event', 'time_on_page', {
+                'time_threshold': '30_seconds',
+                'page_title': document.title,
+                'event_category': 'Engagement'
+            });
+        }
+    }, 30000);
+    
+    setTimeout(function() {
+        if (!timeTracked) {
+            gtag('event', 'time_on_page', {
+                'time_threshold': '1_minute',
+                'page_title': document.title,
+                'event_category': 'Engagement',
+                'value': 1
+            });
+        }
+    }, 60000);
+    
+    setTimeout(function() {
+        if (!timeTracked) {
+            gtag('event', 'time_on_page', {
+                'time_threshold': '2_minutes',
+                'page_title': document.title,
+                'event_category': 'Engagement',
+                'value': 3
+            });
+        }
+    }, 120000);
+    
+    // Track page exit to calculate total time
+    window.addEventListener('beforeunload', function() {
+        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+        
+        gtag('event', 'page_exit', {
+            'time_on_page_seconds': timeOnPage,
+            'page_title': document.title,
+            'event_category': 'Engagement'
+        });
+        
+        timeTracked = true;
+    });
+    
+    // Track outbound link clicks (non-affiliate)
+    const outboundLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
+    outboundLinks.forEach(function(link) {
+        if (!link.closest('.affiliate-cta')) { // Skip affiliate links (already tracked)
+            link.addEventListener('click', function(e) {
+                gtag('event', 'outbound_click', {
+                    'link_url': this.href,
+                    'link_text': this.textContent.trim().substring(0, 50),
+                    'page_title': document.title,
+                    'event_category': 'Outbound Links'
+                });
+            });
+        }
+    });
+});
+</script>

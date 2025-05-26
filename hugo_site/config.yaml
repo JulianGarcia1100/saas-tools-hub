@@ -1,0 +1,33 @@
+baseURL: https://saas-tools-hub.netlify.app
+description: Discover the best SaaS tools for your business
+languageCode: en-us
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+menu:
+  main:
+  - name: Home
+    url: /
+    weight: 10
+  - name: Blog
+    url: /posts/
+    weight: 20
+params:
+  description: Discover the best SaaS tools for your business
+  google_analytics: G-GVJF9RWZE9
+  hubspot_form_id: 42c2c4f6-b032-421b-b9b2-879acb08e826
+  hubspot_portal_id: 242884057
+taxonomies:
+  category: categories
+  tag: tags
+title: SaaS Tools Hub
+
+# Enable sitemap generation
+enableRobotsTXT: true
+
+# Disable Hugo's sitemap generation - we'll use static
+disableKinds:
+  - sitemap
+
+# Keep it simple - no custom output formats

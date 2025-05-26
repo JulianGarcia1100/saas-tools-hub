@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubSpot Form Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .test-section {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success { background: #d1fae5; color: #065f46; }
+        .error { background: #fee2e2; color: #991b1b; }
+        .loading { background: #dbeafe; color: #1e40af; }
+    </style>
+</head>
+<body>
+    <h1>🧪 HubSpot Form Integration Test</h1>
+    
+    <div class="test-section">
+        <h3>📧 Newsletter Signup Test</h3>
+        <p>Testing HubSpot form with your configuration:</p>
+        <ul style="text-align: left;">
+            <li><strong>Portal ID:</strong> 242884057</li>
+            <li><strong>Form ID:</strong> 42c2c4f6-b032-421b-b9b2-879acb08e826</li>
+        </ul>
+        
+        <div id="status" class="status loading">Loading HubSpot script...</div>
+        
+        <div id="test-hubspot-form-container">
+            <div id="test-hubspot-form"></div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>🔍 Debugging Information</h3>
+        <div id="debug-info">
+            <p>Checking HubSpot script loading...</p>
+        </div>
+    </div>
+
+    <!-- HubSpot Script -->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+    
+    <script>
+        let attempts = 0;
+        const maxAttempts = 20;
+        
+        function updateStatus(message, type = 'loading') {
+            const statusEl = document.getElementById('status');
+            statusEl.textContent = message;
+            statusEl.className = `status ${type}`;
+        }
+        
+        function updateDebugInfo(info) {
+            const debugEl = document.getElementById('debug-info');
+            debugEl.innerHTML += `<p>${info}</p>`;
+        }
+        
+        function testHubSpotForm() {
+            attempts++;
+            updateDebugInfo(`Attempt ${attempts}: Checking for HubSpot...`);
+            
+            if (typeof hbspt !== 'undefined' && hbspt.forms) {
+                updateStatus('✅ HubSpot loaded successfully!', 'success');
+                updateDebugInfo('✅ HubSpot object found');
+                updateDebugInfo('✅ hbspt.forms available');
+                
+                try {
+                    // Create the form
+                    hbspt.forms.create({
+                        portalId: "242884057",
+                        formId: "42c2c4f6-b032-421b-b9b2-879acb08e826",
+                        target: "#test-hubspot-form",
+                        onFormReady: function() {
+                            updateStatus('🎉 Form loaded and ready!', 'success');
+                            updateDebugInfo('✅ Form created successfully');
+                        },
+                        onFormSubmit: function() {
+                            updateStatus('📧 Form submitted!', 'success');
+                            updateDebugInfo('✅ Form submission detected');
+                        }
+                    });
+                } catch (error) {
+                    updateStatus('❌ Error creating form: ' + error.message, 'error');
+                    updateDebugInfo('❌ Form creation error: ' + error.message);
+                }
+            } else {
+                if (attempts < maxAttempts) {
+                    updateStatus(`⏳ Waiting for HubSpot... (${attempts}/${maxAttempts})`, 'loading');
+                    updateDebugInfo(`❌ HubSpot not ready yet (attempt ${attempts})`);
+                    setTimeout(testHubSpotForm, 500);
+                } else {
+                    updateStatus('❌ HubSpot failed to load after 10 seconds', 'error');
+                    updateDebugInfo('❌ Max attempts reached - HubSpot script may be blocked or form ID invalid');
+                    
+                    // Additional debugging
+                    updateDebugInfo('🔍 Checking possible issues:');
+                    updateDebugInfo('- Check if form ID 42c2c4f6-b032-421b-b9b2-879acb08e826 exists in HubSpot');
+                    updateDebugInfo('- Check if portal ID 242884057 is correct');
+                    updateDebugInfo('- Check browser console for errors');
+                    updateDebugInfo('- Check if ad blockers are interfering');
+                }
+            }
+        }
+        
+        // Start testing when page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', testHubSpotForm);
+        } else {
+            testHubSpotForm();
+        }
+        
+        // Log any console errors
+        window.addEventListener('error', function(e) {
+            updateDebugInfo('❌ JavaScript Error: ' + e.message);
+        });
+    </script>
+</body>
+</html>

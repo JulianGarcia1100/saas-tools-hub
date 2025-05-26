@@ -1,0 +1,118 @@
+<!-- Related Posts for Internal Linking -->
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ if $related }}
+<section class="related-posts" style="background: #f8fafc; padding: 30px; border-radius: 12px; margin: 40px 0;">
+    <h3 style="color: #1f2937; margin-bottom: 20px; font-size: 1.5rem;">📚 Related SaaS Tool Reviews</h3>
+    <div style="display: grid; gap: 20px;">
+        {{ range $related }}
+        <article style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+            <h4 style="margin: 0 0 10px 0; font-size: 1.1rem;">
+                <a href="{{ .RelPermalink }}" style="color: #1f2937; text-decoration: none; font-weight: 600;">
+                    {{ .Title }}
+                </a>
+            </h4>
+            <p style="color: #6b7280; margin: 0 0 10px 0; font-size: 0.9rem;">
+                {{ if .Description }}{{ .Description | truncate 120 }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}
+            </p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                {{ range .Params.tags | first 3 }}
+                <span style="background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">{{ . }}</span>
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
+<!-- Category-based Internal Links -->
+{{ if .Params.categories }}
+{{ $currentCategory := index .Params.categories 0 }}
+{{ $categoryPosts := where .Site.RegularPages "Params.categories" "intersect" .Params.categories }}
+{{ $otherPosts := $categoryPosts | complement (slice .) | first 4 }}
+{{ if $otherPosts }}
+<section class="category-links" style="background: #f0fdf4; padding: 25px; border-radius: 10px; margin: 30px 0;">
+    <h3 style="color: #166534; margin-bottom: 15px; font-size: 1.3rem;">🔗 More {{ $currentCategory }} Tools</h3>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range $otherPosts }}
+        <li style="margin-bottom: 12px;">
+            <a href="{{ .RelPermalink }}" style="color: #059669; text-decoration: none; font-weight: 500; display: flex; align-items: center;">
+                <span style="margin-right: 8px;">→</span>
+                {{ .Title }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- Tool Comparison Links -->
+{{ if in .Title "vs" }}
+<section class="comparison-links" style="background: #fef3c7; padding: 25px; border-radius: 10px; margin: 30px 0;">
+    <h3 style="color: #92400e; margin-bottom: 15px; font-size: 1.3rem;">⚖️ More Tool Comparisons</h3>
+    {{ $comparisons := where .Site.RegularPages ".Title" "in" "vs" }}
+    {{ $otherComparisons := $comparisons | complement (slice .) | first 4 }}
+    {{ if $otherComparisons }}
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range $otherComparisons }}
+        <li style="margin-bottom: 12px;">
+            <a href="{{ .RelPermalink }}" style="color: #d97706; text-decoration: none; font-weight: 500; display: flex; align-items: center;">
+                <span style="margin-right: 8px;">⚡</span>
+                {{ .Title }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
+{{ end }}
+
+<!-- 2025 Guide Links -->
+{{ if in .Title "2025" }}
+<section class="guide-links" style="background: #ede9fe; padding: 25px; border-radius: 10px; margin: 30px 0;">
+    <h3 style="color: #6b21a8; margin-bottom: 15px; font-size: 1.3rem;">🚀 2025 Business Tool Guides</h3>
+    {{ $guides := where .Site.RegularPages ".Title" "in" "2025" }}
+    {{ $otherGuides := $guides | complement (slice .) | first 4 }}
+    {{ if $otherGuides }}
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range $otherGuides }}
+        <li style="margin-bottom: 12px;">
+            <a href="{{ .RelPermalink }}" style="color: #7c3aed; text-decoration: none; font-weight: 500; display: flex; align-items: center;">
+                <span style="margin-right: 8px;">📈</span>
+                {{ .Title }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
+{{ end }}
+
+<!-- Popular Posts Links -->
+<section class="popular-links" style="background: #f1f5f9; padding: 25px; border-radius: 10px; margin: 30px 0;">
+    <h3 style="color: #334155; margin-bottom: 15px; font-size: 1.3rem;">💡 Popular SaaS Tool Reviews</h3>
+
+    <!-- Get some popular posts by category -->
+    {{ $popularPosts := .Site.RegularPages | first 6 }}
+    {{ $otherPopular := $popularPosts | complement (slice .) | first 4 }}
+    {{ if $otherPopular }}
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range $otherPopular }}
+        <li style="margin-bottom: 12px;">
+            <a href="{{ .RelPermalink }}" style="color: #475569; text-decoration: none; font-weight: 500; display: flex; align-items: center;">
+                <span style="margin-right: 8px;">
+                    {{ if in .Title "CRM" }}🎯
+                    {{ else if in .Title "project" }}📋
+                    {{ else if in .Title "email" }}📧
+                    {{ else if in .Title "AI" }}🤖
+                    {{ else if in .Title "design" }}🎨
+                    {{ else }}⭐{{ end }}
+                </span>
+                {{ .Title }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>

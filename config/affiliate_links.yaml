@@ -1,0 +1,218 @@
+# Affiliate Links Database
+# Format: tool_name -> affiliate_data
+
+# CRM Tools
+hubspot:
+  name: "HubSpot"
+  category: "CRM Tools"
+  affiliate_url: "https://go.try-hubspot.com/c/6231120/976131/12893"
+  description: "All-in-one CRM, marketing, and sales platform"
+  pricing: "Free plan available, paid plans from $45/month"
+  keywords: ["crm", "customer relationship management", "sales automation", "marketing automation"]
+  cta_variations:
+    - "Start your free HubSpot trial"
+    - "Try HubSpot free for 30 days"
+    - "Get HubSpot's free CRM"
+    - "Automate your sales with HubSpot"
+    - "Scale your business with HubSpot"
+
+salesforce:
+  name: "Salesforce"
+  category: "CRM Tools"
+  affiliate_url: "https://www.salesforce.com/form/signup/freetrial-sales/"
+  description: "World's #1 CRM platform"
+  pricing: "From $25/user/month"
+  keywords: ["salesforce", "crm", "sales cloud", "enterprise crm"]
+  cta_variations:
+    - "Start your Salesforce free trial"
+    - "Try Salesforce for free"
+    - "Get Salesforce today"
+    - "Power your sales with Salesforce"
+    - "Join millions using Salesforce"
+
+# Email Marketing Tools
+convertkit:
+  name: "ConvertKit"
+  category: "Email Marketing"
+  affiliate_url: "https://convertkit.com?lmref=your_affiliate_id"
+  description: "Email marketing for creators"
+  pricing: "Free up to 1,000 subscribers, paid plans from $29/month"
+  keywords: ["email marketing", "newsletter", "email automation", "creator tools"]
+  cta_variations:
+    - "Start your ConvertKit free trial"
+    - "Grow your email list with ConvertKit"
+    - "Try ConvertKit free"
+    - "Build your audience with ConvertKit"
+    - "Email marketing made simple"
+
+mailchimp:
+  name: "Mailchimp"
+  category: "Email Marketing"
+  affiliate_url: "https://mailchimp.com/pricing/"
+  description: "All-in-one marketing platform"
+  pricing: "Free plan available, paid plans from $10/month"
+  keywords: ["mailchimp", "email marketing", "marketing automation", "newsletters"]
+  cta_variations:
+    - "Start with Mailchimp for free"
+    - "Try Mailchimp today"
+    - "Grow with Mailchimp"
+    - "Email marketing with Mailchimp"
+    - "Join millions using Mailchimp"
+
+# Project Management Tools
+asana:
+  name: "Asana"
+  category: "Project Management"
+  affiliate_url: "https://asana.com/create-account"
+  description: "Team collaboration and project management"
+  pricing: "Free for teams up to 15 members, paid plans from $10.99/month"
+  keywords: ["project management", "team collaboration", "task management", "workflow"]
+  cta_variations:
+    - "Start using Asana for free"
+    - "Try Asana free"
+    - "Organize your team with Asana"
+    - "Get Asana today"
+    - "Manage projects with Asana"
+
+monday:
+  name: "Monday.com"
+  category: "Project Management"
+  affiliate_url: "https://monday.com/pricing/"
+  description: "Work operating system for teams"
+  pricing: "From $8/user/month"
+  keywords: ["monday.com", "project management", "team management", "workflow automation"]
+  cta_variations:
+    - "Try Monday.com free"
+    - "Start your Monday.com trial"
+    - "Streamline work with Monday.com"
+    - "Get Monday.com today"
+    - "Transform your workflow"
+
+# Design Tools
+canva:
+  name: "Canva"
+  category: "Design Tools"
+  affiliate_url: "https://www.canva.com/join/your-affiliate-code"
+  description: "Graphic design platform"
+  pricing: "Free plan available, Canva Pro from $12.99/month"
+  keywords: ["graphic design", "design tool", "visual content", "templates"]
+  cta_variations:
+    - "Create with Canva for free"
+    - "Try Canva Pro free"
+    - "Design anything with Canva"
+    - "Start designing with Canva"
+    - "Unlock Canva Pro features"
+
+figma:
+  name: "Figma"
+  category: "Design Tools"
+  affiliate_url: "https://www.figma.com/pricing/"
+  description: "Collaborative design platform"
+  pricing: "Free for individuals, paid plans from $12/month"
+  keywords: ["figma", "ui design", "collaborative design", "prototyping"]
+  cta_variations:
+    - "Start designing with Figma"
+    - "Try Figma for free"
+    - "Collaborate with Figma"
+    - "Design better with Figma"
+    - "Get Figma today"
+
+# Analytics Tools
+google_analytics:
+  name: "Google Analytics"
+  category: "Analytics Tools"
+  affiliate_url: "https://analytics.google.com/"
+  description: "Web analytics platform"
+  pricing: "Free"
+  keywords: ["google analytics", "web analytics", "website tracking", "data analysis"]
+  cta_variations:
+    - "Set up Google Analytics"
+    - "Start tracking with Google Analytics"
+    - "Get Google Analytics"
+    - "Analyze your website traffic"
+    - "Track your website performance"
+
+hotjar:
+  name: "Hotjar"
+  category: "Analytics Tools"
+  affiliate_url: "https://www.hotjar.com/pricing/"
+  description: "Website heatmaps and user behavior analytics"
+  pricing: "Free plan available, paid plans from $32/month"
+  keywords: ["hotjar", "heatmaps", "user behavior", "website optimization"]
+  cta_variations:
+    - "Try Hotjar free"
+    - "See how users interact with Hotjar"
+    - "Start your Hotjar trial"
+    - "Optimize with Hotjar"
+    - "Understand your users with Hotjar"
+
+# Automation Tools
+zapier:
+  name: "Zapier"
+  category: "Automation Tools"
+  affiliate_url: "https://zapier.com/sign-up/"
+  description: "Workflow automation platform"
+  pricing: "Free plan available, paid plans from $19.99/month"
+  keywords: ["zapier", "automation", "workflow", "integration", "productivity"]
+  cta_variations:
+    - "Automate with Zapier"
+    - "Try Zapier free"
+    - "Connect your apps with Zapier"
+    - "Start automating with Zapier"
+    - "Save time with Zapier"
+
+make:
+  name: "Make (formerly Integromat)"
+  category: "Automation Tools"
+  affiliate_url: "https://www.make.com/en/register"
+  description: "Visual automation platform"
+  pricing: "Free plan available, paid plans from $9/month"
+  keywords: ["make", "integromat", "automation", "visual automation", "workflow"]
+  cta_variations:
+    - "Try Make for free"
+    - "Automate visually with Make"
+    - "Start your Make journey"
+    - "Build automations with Make"
+    - "Connect everything with Make"
+
+# Communication Tools
+slack:
+  name: "Slack"
+  category: "Communication Tools"
+  affiliate_url: "https://slack.com/get-started"
+  description: "Team communication platform"
+  pricing: "Free plan available, paid plans from $6.67/month"
+  keywords: ["slack", "team communication", "messaging", "collaboration"]
+  cta_variations:
+    - "Get started with Slack"
+    - "Try Slack for your team"
+    - "Communicate better with Slack"
+    - "Start using Slack"
+    - "Join millions on Slack"
+
+discord:
+  name: "Discord"
+  category: "Communication Tools"
+  affiliate_url: "https://discord.com/"
+  description: "Voice, video, and text communication"
+  pricing: "Free, Nitro from $9.99/month"
+  keywords: ["discord", "voice chat", "community", "gaming communication"]
+  cta_variations:
+    - "Join Discord today"
+    - "Start your Discord server"
+    - "Connect with Discord"
+    - "Build your community on Discord"
+    - "Chat with Discord"
+
+# Default CTA templates for any tool
+default_ctas:
+  - "Try {tool_name} free"
+  - "Get started with {tool_name}"
+  - "Start your {tool_name} trial"
+  - "Sign up for {tool_name}"
+  - "Discover {tool_name} today"
+  - "Join thousands using {tool_name}"
+  - "Transform your workflow with {tool_name}"
+  - "Boost productivity with {tool_name}"
+  - "Scale your business with {tool_name}"
+  - "Automate your work with {tool_name}"

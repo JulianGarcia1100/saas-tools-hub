@@ -1,0 +1,205 @@
+<!-- Schema.org Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.description }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{{ if .IsPage }}
+<!-- Article Schema for Blog Posts -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "articleSection": "{{ range .Params.categories }}{{ . }}{{ end }}",
+  "keywords": "{{ range .Params.tags }}{{ . }}, {{ end }}SaaS tools, business software, productivity tools"
+}
+</script>
+
+<!-- Review Schema for Tool Reviews -->
+{{ if in .Title "Review" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "{{ index (split .Title " ") 0 }}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "4.5",
+    "bestRating": "5"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}"
+  },
+  "reviewBody": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}"
+}
+</script>
+{{ end }}
+
+<!-- Comparison Schema for VS Posts -->
+{{ if in .Title "vs" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "{{ .Permalink }}",
+  "headline": "{{ .Title }}",
+  "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "about": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "{{ index (split .Title " ") 0 }}",
+      "applicationCategory": "BusinessApplication"
+    },
+    {
+      "@type": "SoftwareApplication", 
+      "name": "{{ index (split .Title " ") 2 }}",
+      "applicationCategory": "BusinessApplication"
+    }
+  ]
+}
+</script>
+{{ end }}
+
+<!-- FAQ Schema for Posts with FAQ sections -->
+{{ if in .Content "FAQ" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best SaaS tool for small businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best SaaS tool depends on your specific needs. For CRM, HubSpot offers excellent free options. For project management, Asana provides great team collaboration features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do SaaS tools typically cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SaaS tools range from free plans to enterprise solutions. Most small business tools cost $10-50 per user per month, with many offering free tiers."
+      }
+    }
+  ]
+}
+</script>
+{{ end }}
+
+<!-- HowTo Schema for Guide Posts -->
+{{ if in .Title "Guide" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ .Title }}",
+  "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Assess Your Business Needs",
+      "text": "Identify your specific business challenges and requirements before selecting tools."
+    },
+    {
+      "@type": "HowToStep", 
+      "name": "Compare Tool Features",
+      "text": "Evaluate features, pricing, and integrations of different SaaS tools."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Start with Free Trials",
+      "text": "Test tools with free trials before committing to paid plans."
+    }
+  ]
+}
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Breadcrumb Schema -->
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ .Site.BaseURL }}/posts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+{{ end }}

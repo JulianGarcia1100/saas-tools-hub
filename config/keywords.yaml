@@ -1,0 +1,263 @@
+# Keyword Research Configuration
+# Seed keywords and patterns for automated keyword discovery
+
+# Primary Seed Keywords
+seed_keywords:
+  crm_tools:
+    - "best crm for"
+    - "crm software for"
+    - "customer relationship management"
+    - "sales automation tools"
+    - "crm alternatives"
+    - "crm comparison"
+    - "free crm tools"
+    - "small business crm"
+
+  email_marketing:
+    - "email marketing tools"
+    - "newsletter software"
+    - "email automation"
+    - "email marketing platform"
+    - "mailchimp alternatives"
+    - "convertkit vs"
+    - "email marketing for"
+    - "best email tools"
+
+  project_management:
+    - "project management software"
+    - "task management tools"
+    - "team collaboration"
+    - "project planning tools"
+    - "asana alternatives"
+    - "monday.com vs"
+    - "project management for"
+    - "workflow management"
+
+  design_tools:
+    - "graphic design software"
+    - "design tools for"
+    - "canva alternatives"
+    - "logo design tools"
+    - "ui design tools"
+    - "design collaboration"
+    - "free design tools"
+    - "online design platform"
+
+  analytics_tools:
+    - "website analytics"
+    - "google analytics alternatives"
+    - "web tracking tools"
+    - "user behavior analytics"
+    - "conversion tracking"
+    - "analytics dashboard"
+    - "data visualization tools"
+    - "marketing analytics"
+
+  automation_tools:
+    - "workflow automation"
+    - "zapier alternatives"
+    - "business automation"
+    - "process automation"
+    - "integration tools"
+    - "automation software"
+    - "productivity automation"
+    - "no code automation"
+
+# Target Audiences
+target_audiences:
+  - "small businesses"
+  - "startups"
+  - "freelancers"
+  - "agencies"
+  - "consultants"
+  - "entrepreneurs"
+  - "remote teams"
+  - "solopreneurs"
+  - "marketing teams"
+  - "sales teams"
+  - "developers"
+  - "designers"
+  - "content creators"
+  - "coaches"
+  - "real estate agents"
+  - "e-commerce stores"
+  - "nonprofits"
+  - "restaurants"
+  - "fitness trainers"
+  - "photographers"
+
+# Keyword Modifiers
+modifiers:
+  comparison:
+    - "vs"
+    - "versus"
+    - "compared to"
+    - "alternative to"
+    - "better than"
+    - "instead of"
+
+  intent:
+    - "best"
+    - "top"
+    - "review"
+    - "pricing"
+    - "features"
+    - "how to choose"
+    - "guide"
+    - "tutorial"
+    - "tips"
+    - "benefits"
+
+  temporal:
+    - "2024"
+    - "2025"
+    - "latest"
+    - "new"
+    - "updated"
+
+  commercial:
+    - "free"
+    - "cheap"
+    - "affordable"
+    - "budget"
+    - "premium"
+    - "enterprise"
+    - "pricing"
+    - "cost"
+    - "trial"
+    - "demo"
+
+# Keyword Patterns for Auto-Generation
+keyword_patterns:
+  - "best {tool_category} for {audience}"
+  - "{tool_name} vs {competitor} for {audience}"
+  - "{tool_name} alternatives for {audience}"
+  - "how to choose {tool_category} for {audience}"
+  - "{tool_category} comparison for {audience}"
+  - "free {tool_category} for {audience}"
+  - "{tool_name} review for {audience}"
+  - "{tool_name} pricing for {audience}"
+  - "top {tool_category} tools for {audience}"
+  - "{tool_category} guide for {audience}"
+  - "{tool_name} features for {audience}"
+  - "why {audience} need {tool_category}"
+  - "{tool_category} benefits for {audience}"
+  - "getting started with {tool_name} for {audience}"
+  - "{tool_name} tutorial for {audience}"
+
+# Keyword Filtering Criteria
+filtering_criteria:
+  min_search_volume: 100
+  max_keyword_difficulty: 30
+  min_word_count: 3
+  max_word_count: 8
+  exclude_branded: false
+  exclude_patterns:
+    - "login"
+    - "download"
+    - "crack"
+    - "free download"
+    - "torrent"
+    - "pirate"
+    - "hack"
+
+# Search Intent Classification
+search_intent:
+  informational:
+    - "what is"
+    - "how to"
+    - "guide"
+    - "tutorial"
+    - "tips"
+    - "benefits"
+    - "features"
+    - "comparison"
+
+  commercial:
+    - "best"
+    - "top"
+    - "review"
+    - "vs"
+    - "alternative"
+    - "pricing"
+    - "cost"
+
+  transactional:
+    - "buy"
+    - "purchase"
+    - "trial"
+    - "demo"
+    - "signup"
+    - "get started"
+
+# Content Templates by Intent
+content_templates_by_intent:
+  informational:
+    - "Complete Guide to {keyword}"
+    - "Everything You Need to Know About {keyword}"
+    - "{keyword}: A Comprehensive Overview"
+    - "Understanding {keyword} for Beginners"
+
+  commercial:
+    - "Best {keyword} in 2024"
+    - "{keyword}: Top Options Compared"
+    - "{keyword} Review: Which One to Choose?"
+    - "Ultimate {keyword} Comparison Guide"
+
+  transactional:
+    - "Get Started with {keyword} Today"
+    - "{keyword}: Free Trial and Pricing"
+    - "How to Sign Up for {keyword}"
+    - "{keyword} Demo and Setup Guide"
+
+# Seasonal Keywords
+seasonal_keywords:
+  q1:
+    - "new year productivity tools"
+    - "2024 business tools"
+    - "goal tracking software"
+    - "planning tools for new year"
+
+  q2:
+    - "spring cleaning business tools"
+    - "mid-year review tools"
+    - "summer productivity apps"
+
+  q3:
+    - "back to school business tools"
+    - "fall productivity setup"
+    - "q4 planning tools"
+
+  q4:
+    - "year-end review tools"
+    - "holiday business automation"
+    - "black friday software deals"
+    - "cyber monday saas deals"
+
+# Long-tail Keyword Generators
+long_tail_generators:
+  question_words:
+    - "what"
+    - "how"
+    - "why"
+    - "when"
+    - "where"
+    - "which"
+    - "who"
+
+  problem_phrases:
+    - "struggling with"
+    - "need help with"
+    - "looking for"
+    - "trying to find"
+    - "want to improve"
+    - "how to solve"
+    - "best way to"
+
+  solution_phrases:
+    - "tool for"
+    - "software for"
+    - "platform for"
+    - "solution for"
+    - "app for"
+    - "service for"

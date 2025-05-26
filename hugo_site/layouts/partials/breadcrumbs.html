@@ -1,0 +1,73 @@
+<!-- Breadcrumb Navigation for SEO -->
+{{ if .IsPage }}
+<nav aria-label="Breadcrumb" style="margin: 20px 0; padding: 15px 0; border-bottom: 1px solid #e5e7eb;">
+    <ol style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+        <li style="display: flex; align-items: center;">
+            <a href="{{ "/" | relURL }}" style="color: #6b7280; text-decoration: none; hover: color: #374151;">
+                🏠 Home
+            </a>
+        </li>
+        
+        <li style="display: flex; align-items: center; margin: 0 8px;">
+            <span style="color: #d1d5db;">→</span>
+        </li>
+        
+        <li style="display: flex; align-items: center;">
+            <a href="{{ "/posts/" | relURL }}" style="color: #6b7280; text-decoration: none; hover: color: #374151;">
+                📝 Blog
+            </a>
+        </li>
+        
+        {{ if .Params.categories }}
+        <li style="display: flex; align-items: center; margin: 0 8px;">
+            <span style="color: #d1d5db;">→</span>
+        </li>
+        
+        <li style="display: flex; align-items: center;">
+            {{ $category := index .Params.categories 0 }}
+            <a href="{{ printf "/categories/%s/" ($category | urlize) | relURL }}" style="color: #6b7280; text-decoration: none; hover: color: #374151;">
+                {{ if eq $category "ai_tools" }}🤖 AI Tools
+                {{ else if eq $category "crm_tools" }}🎯 CRM Tools
+                {{ else if eq $category "project_management" }}📋 Project Management
+                {{ else if eq $category "email_marketing" }}📧 Email Marketing
+                {{ else if eq $category "design_tools" }}🎨 Design Tools
+                {{ else if eq $category "analytics_tools" }}📊 Analytics Tools
+                {{ else if eq $category "automation_tools" }}⚡ Automation Tools
+                {{ else if eq $category "seasonal_roundup" }}🗓️ Seasonal Roundup
+                {{ else if eq $category "tool_comparison" }}⚖️ Tool Comparison
+                {{ else }}{{ $category | title }}{{ end }}
+            </a>
+        </li>
+        {{ end }}
+        
+        <li style="display: flex; align-items: center; margin: 0 8px;">
+            <span style="color: #d1d5db;">→</span>
+        </li>
+        
+        <li style="color: #374151; font-weight: 500;">
+            {{ .Title | truncate 50 }}
+        </li>
+    </ol>
+</nav>
+{{ end }}
+
+<!-- Category Page Breadcrumbs -->
+{{ if .IsSection }}
+<nav aria-label="Breadcrumb" style="margin: 20px 0; padding: 15px 0; border-bottom: 1px solid #e5e7eb;">
+    <ol style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+        <li style="display: flex; align-items: center;">
+            <a href="{{ "/" | relURL }}" style="color: #6b7280; text-decoration: none;">
+                🏠 Home
+            </a>
+        </li>
+        
+        <li style="display: flex; align-items: center; margin: 0 8px;">
+            <span style="color: #d1d5db;">→</span>
+        </li>
+        
+        <li style="color: #374151; font-weight: 500;">
+            {{ .Title }}
+        </li>
+    </ol>
+</nav>
+{{ end }}

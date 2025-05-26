@@ -1,0 +1,360 @@
+
+/* Basic styling for SEO affiliate site */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+nav a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2563eb;
+}
+
+h1, h2, h3 {
+    color: #1f2937;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.content {
+    margin: 2rem 0;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.content li {
+    margin: 0.5rem 0;
+}
+
+.email-signup {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.categories {
+    margin: 1rem 0;
+}
+
+.category {
+    background: #e5e7eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+.post-summary {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 0;
+}
+
+.post-summary h2 {
+    margin-top: 0;
+}
+
+.post-summary a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.post-summary a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: #6b7280;
+}
+
+/* Affiliate link styling */
+.affiliate-cta {
+    background: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.affiliate-cta a {
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.affiliate-cta a:hover {
+    text-decoration: underline;
+}
+
+/* Homepage Styling */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-newsletter {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.hero-newsletter h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero-newsletter p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Newsletter Form Styling */
+.hero-form, .bottom-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-form input, .bottom-form input {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    min-width: 250px;
+    flex: 1;
+}
+
+.hero-form button, .bottom-form button {
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.hero-form button:hover, .bottom-form button:hover {
+    background: #1d4ed8;
+}
+
+/* Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.post-card {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.post-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.post-card h3 a {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.post-card h3 a:hover {
+    color: #2563eb;
+}
+
+.post-card time {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.post-card p {
+    margin: 1rem 0;
+    color: #4b5563;
+}
+
+.read-more {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.category-card {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.category-card h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+.category-card h4 a {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.category-card h4 a:hover {
+    color: #2563eb;
+}
+
+.category-card p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Bottom Newsletter */
+.bottom-newsletter {
+    margin: 4rem 0 2rem 0;
+}
+
+.newsletter-cta {
+    background: #f8fafc;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #e5e7eb;
+}
+
+.newsletter-cta h3 {
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.newsletter-cta p {
+    margin-bottom: 2rem;
+    color: #4b5563;
+}
+
+/* HubSpot Form Overrides */
+.hs-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hs-form .hs-input {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    margin-bottom: 1rem !important;
+}
+
+.hs-form .hs-button {
+    background: #2563eb !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    width: 100% !important;
+}
+
+.hs-form .hs-button:hover {
+    background: #1d4ed8 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-form, .bottom-form {
+        flex-direction: column;
+    }
+
+    .hero-form input, .bottom-form input {
+        min-width: auto;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

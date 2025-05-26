@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubSpot Form Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .test-section { border: 1px solid #ccc; padding: 20px; margin: 20px 0; }
+        .email-signup { background: #f5f5f5; padding: 20px; border-radius: 5px; }
+        #hubspot-form { border: 2px dashed #007acc; min-height: 100px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>HubSpot Form Debug Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Basic Form Container</h2>
+        <div class="email-signup">
+            <h3>Get More SaaS Tool Reviews</h3>
+            <p>Subscribe to our newsletter for weekly SaaS tool reviews and productivity tips.</p>
+            <div id="hubspot-form">
+                <p style="color: #666;">HubSpot form should load here...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Alternative Form Container</h2>
+        <div id="hubspot-form-2">
+            <p style="color: #666;">Alternative HubSpot form container...</p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Debug Information</h2>
+        <div id="debug-info">
+            <p>Loading debug information...</p>
+        </div>
+    </div>
+
+    <!-- HubSpot Script -->
+    <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+    
+    <script>
+        // Debug function
+        function debugHubSpot() {
+            const debugDiv = document.getElementById('debug-info');
+            let debugHTML = '<h4>Debug Results:</h4>';
+            
+            // Check if HubSpot script loaded
+            if (typeof hbspt !== 'undefined') {
+                debugHTML += '<p>✅ HubSpot script loaded successfully</p>';
+                
+                // Check if forms object exists
+                if (hbspt.forms) {
+                    debugHTML += '<p>✅ HubSpot forms object available</p>';
+                } else {
+                    debugHTML += '<p>❌ HubSpot forms object NOT available</p>';
+                }
+            } else {
+                debugHTML += '<p>❌ HubSpot script NOT loaded</p>';
+            }
+            
+            debugHTML += '<p><strong>Portal ID:</strong> 242884057</p>';
+            debugHTML += '<p><strong>Form ID:</strong> 42c2c4f6-b032-421b-b9b2-879acb08e826</p>';
+            
+            debugDiv.innerHTML = debugHTML;
+        }
+
+        // Wait for HubSpot script to load
+        function waitForHubSpot() {
+            if (typeof hbspt !== 'undefined' && hbspt.forms) {
+                console.log('HubSpot loaded, creating forms...');
+                
+                // Create first form
+                try {
+                    hbspt.forms.create({
+                        portalId: "242884057",
+                        formId: "42c2c4f6-b032-421b-b9b2-879acb08e826",
+                        target: "#hubspot-form"
+                    });
+                    console.log('✅ Form 1 created successfully');
+                } catch (error) {
+                    console.error('❌ Error creating form 1:', error);
+                }
+
+                // Create second form
+                try {
+                    hbspt.forms.create({
+                        portalId: "242884057",
+                        formId: "42c2c4f6-b032-421b-b9b2-879acb08e826",
+                        target: "#hubspot-form-2"
+                    });
+                    console.log('✅ Form 2 created successfully');
+                } catch (error) {
+                    console.error('❌ Error creating form 2:', error);
+                }
+                
+                debugHubSpot();
+            } else {
+                console.log('Waiting for HubSpot to load...');
+                setTimeout(waitForHubSpot, 500);
+            }
+        }
+
+        // Start waiting for HubSpot
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, waiting for HubSpot...');
+            waitForHubSpot();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div style="text-align: center; padding: 4rem 2rem;">
+    <h1>Page Not Found</h1>
+    <p>Sorry, the page you're looking for doesn't exist.</p>
+    
+    <h3>Popular Pages:</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li><a href="{{ "/" | relURL }}">Home</a></li>
+        <li><a href="{{ "/posts/" | relURL }}">All Posts</a></li>
+        <li><a href="{{ "/posts/best-project-management-tools-for-small-teams/" | relURL }}">Best Project Management Tools</a></li>
+        <li><a href="{{ "/posts/best-crm-tools-small-business-2024/" | relURL }}">Best CRM Tools</a></li>
+        <li><a href="{{ "/posts/top-free-design-tools-for-designers-2023/" | relURL }}">Free Design Tools</a></li>
+        <li><a href="{{ "/posts/how-to-choose-analytics-tools-for-coaches/" | relURL }}">Analytics Tools for Coaches</a></li>
+    </ul>
+    
+    <p><a href="{{ "/" | relURL }}">← Back to Home</a></p>
+</div>
+{{ end }}
