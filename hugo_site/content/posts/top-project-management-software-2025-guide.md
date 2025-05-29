@@ -94,7 +94,7 @@ Both Asana and Monday.com have their strengths, but here's a quick comparison:
 <h4>💡 Recommended Tool: Monday.com</h4>
 <p>Work operating system for teams</p>
 <p><strong>Pricing:</strong> From $8/user/month</p>
-<p><a href="https://monday.com/pricing/" target="_blank" rel="noopener">Try Monday.com free →</a></p>
+<p><a href="https://try.monday.com/i3uktzjx1q6o" target="_blank" rel="noopener">Try Monday.com free →</a></p>
 </div>
 
 ## How to Choose the Right Project Management Software for Your Needs

@@ -68,7 +68,7 @@ Asana offers a free tier for teams up to 15 members, making it an attractive opt
 
 ### Monday Pricing
 
-Monday's basic plan starts at $8 per user/month, albeit with limited features. However, it offers higher-tier plans that unlock more advanced functionalities suitable for larger teams or more complex projects.
+[Monday.com's](https://try.monday.com/i3uktzjx1q6o) basic plan starts at $8 per user/month, albeit with limited features. However, it offers higher-tier plans that unlock more advanced functionalities suitable for larger teams or more complex projects.
 
 ### ClickUp Pricing
 
