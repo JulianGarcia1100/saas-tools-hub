@@ -1,0 +1,28 @@
+{
+  "name": "saas-tools-hub",
+  "version": "1.0.0",
+  "description": "SaaS Tools Hub - Hugo Static Site for Affiliate Marketing",
+  "scripts": {
+    "build": "cd hugo_site && hugo --minify",
+    "dev": "cd hugo_site && hugo server -D",
+    "clean": "cd hugo_site && rm -rf public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulianGarcia1100/saas-tools-hub.git"
+  },
+  "keywords": [
+    "hugo",
+    "static-site",
+    "affiliate-marketing",
+    "saas-tools",
+    "blog"
+  ],
+  "author": "Julian Garcia",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
