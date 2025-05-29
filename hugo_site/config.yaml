@@ -13,6 +13,15 @@ menu:
   - name: Blog
     url: /posts/
     weight: 20
+  - name: Best Tools
+    url: /categories/project_management/
+    weight: 30
+  - name: Comparisons
+    url: /categories/tool_comparison/
+    weight: 40
+  - name: Reviews
+    url: /tags/software-review/
+    weight: 50
 params:
   description: Discover the best SaaS tools for your business
   google_analytics: G-GVJF9RWZE9
